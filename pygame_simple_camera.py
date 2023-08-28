@@ -7,6 +7,7 @@
 #  --  cupnooble.itch.io/sprout-lands-asset-pack
 
 import pygame
+import os
 
 # initialise Pygame
 pygame.init()
@@ -19,7 +20,7 @@ pygame.display.set_caption('Simple camera example')
 clock = pygame.time.Clock()
 
 character = pygame.sprite.Sprite()
-character.image = pygame.image.load('character.png')
+character.image = pygame.image.load(os.path.join('images', 'character.png'))
 character.position = (100, 100)
 character.size = (36, 48)
 
