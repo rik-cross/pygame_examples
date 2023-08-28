@@ -1,7 +1,6 @@
 #
 # pygameTemplate.py
-# part of the pygame_utils library
-# github.com/rik-cross/pygame_utils
+# github.com/rik-cross/pygame_examples
 #
 
 import pygame
