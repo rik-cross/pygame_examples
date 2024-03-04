@@ -1,7 +1,7 @@
 #
 # Pygame simple camera example
-# part of the pygame_utils library
-#  -- github.com/rik-cross/pygame_utils
+# part of the pygame_examples library
+#  -- github.com/rik-cross/pygame_examples
 #
 # Image credit - Cup Nooble
 #  --  cupnooble.itch.io/sprout-lands-asset-pack
