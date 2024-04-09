@@ -35,7 +35,7 @@ character.size = (36, 48)
 
 map = pygame.image.load(os.path.join('images', 'grass.png'))
 mapPosition = (0, 0)
-mapSize = (256, 256)
+mapSize = (128, 256)
 
 cameraPosition = (50, 50)
 cameraSize = (360, 360)
@@ -43,8 +43,11 @@ cameraSize = (360, 360)
 cameraCenter = (cameraPosition[0] + cameraSize[0] / 2,
                 cameraPosition[1] + cameraSize[1] / 2)
 cameraZoom = 3
-# set a minimim zoom
-minZoom = cameraSize[0] / mapSize[0]
+# set a minimim zoom, based on the largest map dimension
+if mapSize[0] > mapSize[1]:
+    minZoom = cameraSize[0] / mapSize[0]
+else:
+    minZoom = cameraSize[1] / mapSize[1]
 
 # the target for the camera
 cameraWorldTarget = (character.position[0] + character.size[0] / 2,
