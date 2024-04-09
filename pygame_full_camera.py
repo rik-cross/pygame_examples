@@ -43,7 +43,7 @@ cameraSize = (360, 360)
 cameraCenter = (cameraPosition[0] + cameraSize[0] / 2,
                 cameraPosition[1] + cameraSize[1] / 2)
 cameraZoom = 3
-# set a minimim zoom size
+# set a minimim zoom
 minZoom = cameraSize[0] / mapSize[0]
 
 # the target for the camera
