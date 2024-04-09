@@ -46,7 +46,7 @@ minZoom = cameraSize[0] / 256
 
 # the target for the camera
 cameraWorldTarget = (character.position[0] + character.size[0] / 2,
-                        character.position[1] + character.size[1] / 2)
+                     character.position[1] + character.size[1] / 2)
 
 # the current calculated target (for lazy follow)
 currentTarget = cameraWorldTarget
@@ -95,7 +95,7 @@ while running:
     # and just 5% movement towards the target position (per frame)
     # this results in a 'lazy follow'
     currentTarget = (currentTarget[0] * 0.95 + cameraWorldTarget[0] * 0.05,
-                  currentTarget[1] * 0.95 + cameraWorldTarget[1] * 0.05)
+                     currentTarget[1] * 0.95 + cameraWorldTarget[1] * 0.05)
 
     # the camera target needs to be adjusted
     # to account for the zoom factor
@@ -129,8 +129,8 @@ while running:
     # draw a map
     screen.blit(
         # scale the image
-        pygame.transform.scale(map, (grass.get_size()[0] * cameraZoom,
-                                       grass.get_size()[1] * cameraZoom)), 
+        pygame.transform.scale(map, (map.get_size()[0] * cameraZoom,
+                                     map.get_size()[1] * cameraZoom)), 
         # position the image
         (cameraScreenOffset[0] + 0 * cameraZoom,
          cameraScreenOffset[1] + 0 * cameraZoom))
