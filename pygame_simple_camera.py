@@ -7,9 +7,11 @@
 #  --  cupnooble.itch.io/sprout-lands-asset-pack
 #
 
+#
 # This simple example assumes that the camera
 # is the full size of the screen. The 'full camera'
 # example covers camera size, position, zoom, etc.
+#
 
 import pygame
 import os
