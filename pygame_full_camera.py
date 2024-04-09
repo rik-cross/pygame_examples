@@ -35,7 +35,7 @@ character.size = (36, 48)
 
 map = pygame.image.load(os.path.join('images', 'grass.png'))
 mapPosition = (0, 0)
-mapSize = (128, 256)
+mapSize = (256, 256)
 
 cameraPosition = (50, 50)
 cameraSize = (360, 360)
