@@ -7,6 +7,13 @@
 #  --  cupnooble.itch.io/sprout-lands-asset-pack
 #
 
+#
+# Features:
+#  -- Zoom
+#  -- Lazy follow
+#  -- Clamp to map
+#
+
 import pygame
 import os
 
