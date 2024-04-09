@@ -34,6 +34,8 @@ character.position = (50, 50)
 character.size = (36, 48)
 
 map = pygame.image.load(os.path.join('images', 'grass.png'))
+mapPosition = (0, 0)
+mapSize = (256, 256)
 
 cameraPosition = (50, 50)
 cameraSize = (360, 360)
@@ -42,7 +44,7 @@ cameraCenter = (cameraPosition[0] + cameraSize[0] / 2,
                 cameraPosition[1] + cameraSize[1] / 2)
 cameraZoom = 3
 # set a minimim zoom size
-minZoom = cameraSize[0] / 256
+minZoom = cameraSize[0] / mapSize[0]
 
 # the target for the camera
 cameraWorldTarget = (character.position[0] + character.size[0] / 2,
@@ -104,8 +106,8 @@ while running:
 
     # clamp the camera to the bounds of the map
     adjustedTarget = (
-        max(min(adjustedTarget[0], map.get_size()[0] * cameraZoom-cameraSize[0]/2), 0 * cameraZoom + cameraSize[0]/2),
-        max(min(adjustedTarget[1], map.get_size()[1] * cameraZoom-cameraSize[1]/2), 0 * cameraZoom + cameraSize[1]/2)
+        max(min(adjustedTarget[0], mapSize[0] * cameraZoom-cameraSize[0]/2), mapPosition[0] * cameraZoom + cameraSize[0]/2),
+        max(min(adjustedTarget[1], mapSize[1] * cameraZoom-cameraSize[1]/2), mapPosition[1] * cameraZoom + cameraSize[1]/2)
     )
 
     # the overall offset for each game object is
@@ -129,11 +131,11 @@ while running:
     # draw a map
     screen.blit(
         # scale the image
-        pygame.transform.scale(map, (map.get_size()[0] * cameraZoom,
-                                     map.get_size()[1] * cameraZoom)), 
+        pygame.transform.scale(map, (mapSize[0] * cameraZoom,
+                                     mapSize[1] * cameraZoom)), 
         # position the image
-        (cameraScreenOffset[0] + 0 * cameraZoom,
-         cameraScreenOffset[1] + 0 * cameraZoom))
+        (cameraScreenOffset[0] + mapPosition[0] * cameraZoom,
+         cameraScreenOffset[1] + mapPosition[1] * cameraZoom))
 
     # draw the character
     screen.blit(
