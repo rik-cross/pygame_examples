@@ -109,7 +109,7 @@ while running:
     # (no need to worry about the camera size as the drawing area is clipped)
     screen.fill('gray10')
 
-    # draw another sprite, to allow us to see motion
+    # draw a map
     screen.blit(
         # scale the image
         pygame.transform.scale(grass, (grass.get_size()[0] * cameraZoom,
