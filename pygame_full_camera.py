@@ -4,7 +4,7 @@
 #  -- github.com/rik-cross/pygame_examples
 #
 # Image credit - Cup Nooble
-#  --  cupnooble.itch.io/sprout-lands-asset-pack
+#  -- cupnooble.itch.io/sprout-lands-asset-pack
 #
 
 #
