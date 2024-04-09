@@ -8,9 +8,9 @@
 #
 
 #
-# This simple example assumes that the camera
-# is the full size of the screen. The 'full camera'
-# example covers camera size, position, zoom, etc.
+# This simple example assumes that the camera is the
+# full size of the screen. The 'full camera' example covers
+# camera size, position, zoom, lazy follow and clamping
 #
 
 import pygame
