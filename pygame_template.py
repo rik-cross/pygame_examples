@@ -18,9 +18,6 @@ clock = pygame.time.Clock()
 running = True
 while running:
 
-    # clear screen to Cornflower Blue
-    screen.fill('cornflowerblue')
-
     # advance clock at 60 FPS
     clock.tick(60)
 
@@ -45,6 +42,9 @@ while running:
     # draw
     #
 
+    # clear screen to Cornflower Blue
+    screen.fill('cornflowerblue')
+    
     # add code here
 
     # draw to the screen
