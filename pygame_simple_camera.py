@@ -38,9 +38,6 @@ screenCenter = (screen_size[0] / 2, screen_size[1] / 2)
 running = True
 while running:
 
-    # clear screen to Cornflower Blue
-    screen.fill('cornflowerblue')
-
     # advance clock at 60 FPS
     clock.tick(60)
 
@@ -56,7 +53,10 @@ while running:
     # camera offset = camera center - camera target
     cameraOffset = (screenCenter[0] - cameraTarget[0],
                     screenCenter[1] - cameraTarget[1])
-
+    
+    # clear screen to Cornflower Blue
+    screen.fill('cornflowerblue')
+    
     # player position doesn't change, instead the offset is added to the position
     screen.blit(character.image, (cameraOffset[0] + character.position[0], 
                                   cameraOffset[1] + character.position[1]))
