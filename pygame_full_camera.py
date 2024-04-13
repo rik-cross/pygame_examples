@@ -60,9 +60,6 @@ currentTarget = cameraWorldTarget
 running = True
 while running:
 
-    # clear screen to Cornflower Blue
-    screen.fill('cornflowerblue')
-
     # advance clock at 60 FPS
     clock.tick(60)
 
@@ -122,6 +119,9 @@ while running:
     # to account for the camera zoom
     adjustedChar = (character.position[0] * cameraZoom,
                     character.position[1] * cameraZoom)
+
+    # clear screen to Cornflower Blue
+    screen.fill('cornflowerblue')
 
     # clip the drawing area to the camera
     screen.set_clip((cameraPosition[0], cameraPosition[1],
